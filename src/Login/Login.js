@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import { AuthContext } from "../Context/Auth/Auth.js";
-import "./Login.css"
+import "./Login.css";
 
 
 function Login() {
@@ -10,12 +10,12 @@ function Login() {
   return (
     <div className="wrap-login">
 
-      <img alt="login-mkup"className="wrap-login-banner" src="https://i.pinimg.com/564x/1b/ac/d0/1bacd04347527e41808ba3ead27c8421.jpg"></img>
+      <img alt="login-mkup" className="wrap-login-banner" src="https://i.pinimg.com/564x/1b/ac/d0/1bacd04347527e41808ba3ead27c8421.jpg" />
       
       <section className="wrap-login-registro">
       <h2>Inicia sesion</h2>
       <button onClick={metodos.sessionConGoogle}>google</button>
-      {/* <button onClick={metodos.sessionConGithub}>github</button> */}
+      {/* <button onClick={metodos.sessionConGithub}>github</button> Esta sesión se sacó de firebase*/}
       </section>
     </div>
   );
