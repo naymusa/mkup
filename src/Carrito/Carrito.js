@@ -19,7 +19,7 @@ function Carrito () {
             <ul>
                 {carrito.map((productoIndividual) => 
                 <li>
-                    <Productos productoIndividual={productoIndividual} carrito={true} />
+                    <Productos datosDeProducto={productoIndividual} carrito={true} />
                 </li>
                 )}
             </ul>

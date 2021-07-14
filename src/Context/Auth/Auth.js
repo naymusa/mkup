@@ -65,7 +65,7 @@ function Auth(props) {
 
     setCarrito((prevState) =>
       prevState.filter(
-        (productoIndividual) => productoIndividual._id != productoEliminado._id
+        (productoIndividual) => productoIndividual._id !== productoEliminado._id
       )
     );
   };

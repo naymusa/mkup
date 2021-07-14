@@ -2,18 +2,13 @@ import Home from "./Home/Home";
 import AuthContext from "./Context/Auth/Auth.js";
 import Header from "./NavBar/Header/Header";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Detalle1 from "./Home/Detalle/Detalle1";
 import Login from "./Login/Login";
 
-import firebase from "firebase/app";
-import "firebase/auth";
-import {
-  FirebaseAuthProvider,
-  FirebaseAuthConsumer,
-} from "@react-firebase/auth";
 
-import { firebaseConfig } from "./Constantes";
+import "firebase/auth";
+
 import Footer from "./Footer/Footer";
 import Carrito from "./Carrito/Carrito";
 

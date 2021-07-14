@@ -35,10 +35,10 @@ function Detalle1 () {
 
                     <h4>{producto.product_name}</h4>
 
-                    <img src={producto.image}></img>
+                    <img src={producto.image} alt="maquillaje"></img>
                     <p>{producto.description}</p>
                     <p>$ {producto.price}</p>
-                    <img>{producto.image}</img>
+                    {/* <img alt="maquillaje">{producto.image}</img> */}
                     {producto.isActive ? <button>Comprar</button> : <p>Agotado</p>}
                 </div>
  

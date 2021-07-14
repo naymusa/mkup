@@ -1,6 +1,5 @@
 // import React from "react";
 import "./Header.css";
-import NavBar from "../NavBar";
 
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -20,7 +19,7 @@ function Header() {
         <div className="navbar-section-info">
             <div className="navbar-section-info-logo">
                 <Link to='/'>
-                <img
+                <img alt="maquillaje-musa"
                 src="https://1757140519.rsc.cdn77.org/blog/wp-content/uploads/sites/4/2019/03/0059_t_cherie_s-beauty-logo_11.png"/>
                 </Link>
             </div>

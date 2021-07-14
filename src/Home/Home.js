@@ -1,10 +1,8 @@
 import React from "react";
 
-import NavBar from "../NavBar/NavBar";
 import Recomendados from "./Recomendados/Recomendados";
 import "./Productos/Productos.css"
 
-import Header from "../NavBar/Header/Header";
 import Banner from "./Banner/Banner1";
 
 
