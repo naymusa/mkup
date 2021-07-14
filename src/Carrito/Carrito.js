@@ -19,6 +19,7 @@ function Carrito () {
             <ul>
                 {carrito.map((productoIndividual) => 
                 <li>
+                    true se agrega por la
                     <Productos datosDeProducto={productoIndividual} carrito={true} />
                 </li>
                 )}

@@ -19,7 +19,7 @@ function NavBar() {
           <Link to='/test'>test</Link>
         </li> */}
         {isSignedIn && <button onClick={metodos.logout}>logout</button>}
-        {!isSignedIn && <Link to='/login'>Inicia sesion</Link>}
+        {!isSignedIn && <Link to='/login'><button>Inicia sesion</button></Link>}
       </ul>
     </header>
   );

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Productos from "../Home/Productos/Productos";
+
 
 function useCarrito (productoIndividual) {
     const [total , setTotal] = useState(0);
