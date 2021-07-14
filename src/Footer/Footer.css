@@ -1,0 +1,42 @@
+.wrap{
+    background-color: rgb(247, 231, 233);
+    margin-top: 10px;
+   
+}
+
+.wrap-footer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-newsletter{
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+    border-color: purple;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.boton-input-newsletter{
+    color: purple;
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: purple;
+    height: 25px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}

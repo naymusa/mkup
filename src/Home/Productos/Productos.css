@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(218, 196, 208);
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: auto;
+    width: 250px;
+    min-height: 308px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+.cards p{
+    margin: 5px;
+}
+
+.cards img {
+    width: 230px;
+    height: auto;
+
+}
+
+.vitrinas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-right: 40px;
+
+}

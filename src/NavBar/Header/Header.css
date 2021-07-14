@@ -1,0 +1,85 @@
+
+.navbar-cintillo p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.navbar-section-info {
+    background-color: white;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-section-info-logo img{
+    width: 150px;
+    height: auto;
+    display: flex;
+}
+
+.navbar-section-info-search input{
+    width: 300px;
+    height: 30px;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: lightpink;
+}
+
+.navbar-section-info-help {
+    display: flex;
+    margin-top: 10px;
+    margin-right: 20px;
+    align-items: flex-end;
+}
+
+.navbar-boton{
+    height: auto;
+    background-color: blue;
+
+}
+
+.icono img{
+    width: 30px;
+    height: auto;
+}
+/* .Avatar{
+    width: 40px;
+    height: auto;
+    display: flex;
+}
+
+.carrito-img{
+    width: 0px;
+    height: auto;
+    color:white;
+}
+
+.telefono{
+    width: auto;
+    height: 40px;
+    
+}
+
+.ayuda{
+    width: auto;
+    height: 40px;
+   
+} */
+
+
+.Categorias{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(184, 184, 184);
+}
+
+.catego{
+    margin-block: 8px;
+}
+
+.header-navbar{
+    position:fixed;
+    width: 100%;
+}
