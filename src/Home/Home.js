@@ -2,7 +2,6 @@ import React from "react";
 
 import Recomendados from "./Recomendados/Recomendados";
 import "./Productos/Productos.css"
-import Detalle1 from "./Detalle/Detalle1";
 
 import Banner from "./Banner/Banner1";
 
@@ -12,7 +11,6 @@ function Home() {
     return(
         <div>
             <Banner />
-            <Detalle1 />
             <Recomendados />
             
             

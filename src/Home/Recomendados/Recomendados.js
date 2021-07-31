@@ -17,7 +17,7 @@ function Recomendados() {
 
 
 useEffect(() => {
-  fetch("http://localhost:3003/catalogo/")
+  fetch("https://6104b1ec96a7060008121a49--hungry-jang-a05289.netlify.app/.netlify/functions/server/catalogoApi/productos")
     .then((response) => response.json())
     .then((data) => {
         console.log(data)
