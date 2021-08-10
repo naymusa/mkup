@@ -9,7 +9,7 @@ function Recomendados() {
 
   const [catalogo, setProducto] = useState([]);
   const [formulario, setValores] = useState ({ term: ""});
-  const { prodFilter } = useFilter(productos, formulario.term);
+  const { prodFilter } = useFilter(catalogo, formulario.term);
   
   // use efect ejecuta codigo escuchando a las dependencias ([])
   // las dependencias son el arreglo, y dentro se le mandan valores
