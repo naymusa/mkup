@@ -24,6 +24,14 @@ function Header() {
   const { session, metodos } = useContext(AuthContext);
   const { isSignedIn, user } = session;
 
+  useEffect(() => {
+    fetch("https://hungry-jang-a05289.netlify.app/.netlify/functions/server/catalogoApi/productos")
+      .then((response) => response.json())
+      .then((data) => {
+          console.log(data)
+          setProducto(data)});
+  });
+
   return (
     <div className="navbar">
       <div className="navbar-cintillo">
