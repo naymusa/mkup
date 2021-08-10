@@ -14,7 +14,7 @@ function Login() {
       
       <section className="wrap-login-registro">
       <h2>Inicia sesion</h2>
-      <button onClick={metodos.sessionConGoogle}>google</button>
+      <button className="navbar-boton" onClick={metodos.sessionConGoogle}>google</button>
       {/* <button onClick={metodos.sessionConGithub}>github</button> Esta sesión se sacó de firebase*/}
       </section>
     </div>

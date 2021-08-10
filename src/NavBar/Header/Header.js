@@ -71,16 +71,16 @@ function Header() {
           <div className="navbar-boton">
             {/* <img className="telefono"
                     src="https://img.icons8.com/material/452/phone--v1.png"/> */}
-            <button>Contacto </button>
+            <button>Contacto</button>
           </div>
           <div className="navbar-boton">
             {/* <img className="ayuda"
                         src="https://image.flaticon.com/icons/png/512/18/18436.png"/> */}
-            <button>Ayuda </button>
+            <button>Ayuda</button>
           </div>
 
           <div className="navbar-boton">
-            {!isSignedIn && <Link to="/login">Inicia sesion</Link>}
+            {!isSignedIn && <Link to="/login"><button>Inicia sesión</button></Link>}
             {isSignedIn && (
               <button onClick={metodos.logout}>Hola, {user.displayName}</button>
             )}
