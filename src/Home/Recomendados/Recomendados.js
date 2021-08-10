@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Productos from "../Productos/Productos";
 
+import useFilter from "./useFilter";
+
 function Recomendados() {
   // salida //[]
   //const [productos, setProductos] = useState(listaProductos);
 
   const [catalogo, setProducto] = useState([]);
-  // const [formulario, setValores] = useState ({ term: ""});
+  const [formulario, setValores] = useState ({ term: ""});
+  const { prodFilter } = useFilter(productos, formulario.term);
   
   // use efect ejecuta codigo escuchando a las dependencias ([])
   // las dependencias son el arreglo, y dentro se le mandan valores
@@ -20,17 +23,42 @@ useEffect(() => {
         setProducto(data)});
 });
 
-  return (
-    <ul className="vitrinas">
-      {catalogo.map((productoIndividual) => {
-        return (
-          <li key={productoIndividual._id}>
-            <Productos datosDeProducto={productoIndividual} />
-          </li>
-        );
-      })}
-    </ul>
-  );
+const handleInputChange = (event) => {
+  const target = event.target;
+  const value = target.type === "checkbox" ? target.checked : target.value;
+  const name = target.name;
+  setValores({ ...formulario, [name]: value });
+};
+
+return (
+  <div>
+    <input name='term' onChange={handleInputChange} />
+    <div className='container'>
+      <ul className='vitrinas'>
+        {prodFilter.map((productoIndividual) => {
+          return (
+            <li key={productoIndividual._id}>
+              <Productos datosDeProducto={productoIndividual} />
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </div>
+);
+
+
+  // return (
+  //   <ul className="vitrinas">
+  //     {catalogo.map((productoIndividual) => {
+  //       return (
+  //         <li key={productoIndividual._id}>
+  //           <Productos datosDeProducto={productoIndividual} />
+  //         </li>
+  //       );
+  //     })}
+  //   </ul>
+  // );
 }
 export default Recomendados;
 
