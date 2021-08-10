@@ -1,9 +1,10 @@
 // import React from "react";
 import "./Header.css";
 
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import useFilter from "../../Home/Recomendados/useFilter.js";
+import Productos from "../../Home/Productos/Productos";
 
 import { Link } from "react-router-dom";
 
