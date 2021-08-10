@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-
-
 import Productos from "../Productos/Productos";
-
 
 function Recomendados() {
   // salida //[]
@@ -15,16 +12,13 @@ function Recomendados() {
   // las dependencias son el arreglo, y dentro se le mandan valores
   // si algun valor de la dependencia cambia se vuelve a ejecutar el codigo.
 
-
 useEffect(() => {
   fetch("https://6104b1ec96a7060008121a49--hungry-jang-a05289.netlify.app/.netlify/functions/server/catalogoApi/productos")
     .then((response) => response.json())
     .then((data) => {
         console.log(data)
-        setProducto(data.makeup)});
+        setProducto(data)});
 });
-
-  
 
   return (
     <ul className="vitrinas">
@@ -38,7 +32,6 @@ useEffect(() => {
     </ul>
   );
 }
-
 export default Recomendados;
 
 // const listaProductos = [
