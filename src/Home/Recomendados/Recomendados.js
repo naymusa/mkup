@@ -13,7 +13,7 @@ function Recomendados() {
   // si algun valor de la dependencia cambia se vuelve a ejecutar el codigo.
 
 useEffect(() => {
-  fetch("https://6104b1ec96a7060008121a49--hungry-jang-a05289.netlify.app/.netlify/functions/server/catalogoApi/productos")
+  fetch("https://hungry-jang-a05289.netlify.app/.netlify/functions/server/catalogoApi/productos")
     .then((response) => response.json())
     .then((data) => {
         console.log(data)

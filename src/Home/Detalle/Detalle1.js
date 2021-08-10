@@ -18,7 +18,7 @@ function Detalle1 () {
   
     useEffect(() => {
         console.log("dsssss")
-      fetch("https://6104b1ec96a7060008121a49--hungry-jang-a05289.netlify.app/.netlify/functions/server/catalogoApi/productos" + idProducto)
+      fetch("https://hungry-jang-a05289.netlify.app/.netlify/functions/server/catalogoApi/productos" + idProducto)
         .then((response) => response.json())
         .then((data) => {
             console.log(data)
