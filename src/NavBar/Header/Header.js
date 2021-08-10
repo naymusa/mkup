@@ -3,7 +3,7 @@ import "./Header.css";
 
 import React, { useContext } from "react";
 
-import useFilter from "./useFilter";
+import useFilter from "../../Home/Recomendados/useFilter.js";
 
 import { Link } from "react-router-dom";
 
