@@ -7,7 +7,7 @@ import "./Detalle1.css"
 
 function Detalle1 (props) {
 
-    const {agregarCarrito , quitarDeCarrito} = useContext(AuthContext);
+    const {agregarCarrito} = useContext(AuthContext);
 
     const [producto, setProducto] = useState({
         image: null,
