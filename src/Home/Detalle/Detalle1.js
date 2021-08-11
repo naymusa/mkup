@@ -40,13 +40,17 @@ function Detalle1 (props) {
                     <img className="img-pdp" src={producto.image} alt="maquillaje"></img>
 
                     <section className="datos-producto-pdp">
-                        <h4>{producto.product_name}</h4>
-                        <p>{producto.description}</p>
+                        <h3>{producto.product_name}</h3>
+                        <h4>{producto.brand}</h4>
                         <p className="precio-producto-pdp">$ {producto.price}</p>
+                        <p>{producto.description}</p>
+                        
                         {/* <img alt="maquillaje">{producto.image}</img> */}
                         {producto.isActive ? <button type="button" className=" btn btn-verde" onClick={() => {
                         agregarCarrito(props.datosDeProducto);
-                        }} > Agregar al carrito </button>  : <p>Agotado</p>}
+                        }} > Comprar ahora </button>  : <p>Agotado</p>}
+                        <br></br>
+                        <button type="button">Agregar a mis favoritos</button>
                     </section>
                 </div>
  

@@ -1,8 +1,16 @@
 
 .navbar-cintillo p {
-    font-size: 12px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    font-size: 14px;
+    margin: 0px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    
+}
+
+.navbar-cintillo{
+    background-color: rgb(226, 121, 188);
+    height: 25px;
 }
 .navbar-section-info {
     background-color: white;
@@ -50,8 +58,9 @@
 }
 
 .navbar-boton button:hover {
-    background: purple;
+    background: rgb(226, 121, 188);
     color: white;
+    border-color: rgb(226, 121, 188);
 }
 
 .icono img{
@@ -94,7 +103,7 @@
     margin-block: 8px;
 }
 
-.header-navbar{
-    position:fixed;
+.navbar{
+    /* position:fixed; */
     width: 100%;
 }
