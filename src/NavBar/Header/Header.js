@@ -1,37 +1,17 @@
 // import React from "react";
 import "./Header.css";
+import Buscador from "./Buscador.js";
 
-import React, { useContext, useState, useEffect } from "react";
-
-import useFilter from "../../Home/Recomendados/useFilter.js";
-import Productos from "../../Home/Productos/Productos";
+import React, { useContext } from "react";
 
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../../Context/Auth/Auth.js";
 
 function Header() {
-  const [catalogo, setProducto] = useState([]);
-  const [formulario, setValores] = useState({ term: "" });
-  const { prodFilter } = useFilter(catalogo, formulario.term);
-
-  const handleInputChange = (event) => {
-    const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
-    setValores({ ...formulario, [name]: value });
-  };
-
+  
   const { session, metodos } = useContext(AuthContext);
   const { isSignedIn, user } = session;
-
-  useEffect(() => {
-    fetch("https://hungry-jang-a05289.netlify.app/.netlify/functions/server/catalogoApi/productos")
-      .then((response) => response.json())
-      .then((data) => {
-          console.log(data)
-          setProducto(data)});
-  });
 
   return (
     <div className="navbar">
@@ -49,22 +29,7 @@ function Header() {
         </div>
 
         <div className="navbar-section-info-search">
-          <input
-            placeholder="Quiero comprar..."
-            name="term"
-            onChange={handleInputChange}
-          />
-          <div className="container">
-            <ul className="vitrinas">
-              {prodFilter.map((productoIndividual) => {
-                return (
-                  <li key={productoIndividual._id}>
-                    <Productos datosDeProducto={productoIndividual} />
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+            <Buscador  />
         </div>
 
         <div className="navbar-section-info-help">
