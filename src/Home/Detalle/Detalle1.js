@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+import { AuthContext } from "../../Context/Auth/Auth.js"
+import "./Detalle1.css"
 
-function Detalle1 () {
+
+function Detalle1 (props) {
+
+    const {agregarCarrito , quitarDeCarrito} = useContext(AuthContext);
 
     const [producto, setProducto] = useState({
         image: null,
@@ -30,15 +35,19 @@ function Detalle1 () {
             <div>
                 <h3>Detalle de Producto</h3>
 
-                <div>
+                <div className="wrap-pdp">
 
-                    <h4>{producto.product_name}</h4>
+                    <img className="img-pdp" src={producto.image} alt="maquillaje"></img>
 
-                    <img src={producto.image} alt="maquillaje"></img>
-                    <p>{producto.description}</p>
-                    <p>$ {producto.price}</p>
-                    {/* <img alt="maquillaje">{producto.image}</img> */}
-                    {producto.isActive ? <button>Comprar</button> : <p>Agotado</p>}
+                    <section className="datos-producto-pdp">
+                        <h4>{producto.product_name}</h4>
+                        <p>{producto.description}</p>
+                        <p className="precio-producto-pdp">$ {producto.price}</p>
+                        {/* <img alt="maquillaje">{producto.image}</img> */}
+                        {producto.isActive ? <button type="button" className=" btn btn-verde" onClick={() => {
+                        agregarCarrito(props.datosDeProducto);
+                        }} > Agregar al carrito </button>  : <p>Agotado</p>}
+                    </section>
                 </div>
  
             </div>

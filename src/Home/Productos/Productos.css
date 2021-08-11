@@ -5,7 +5,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: auto;
+    height: 360px;
     width: 250px;
     min-height: 308px;
     align-items: center;
@@ -31,4 +31,21 @@ body{
     list-style-type: none;
     padding-right: 40px;
 
+}
+
+.precio-producto{
+    font-weight: bold;
+    color: deeppink;   
+}
+
+.datos-producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.img-pdp{
+    width: 450px;
 }

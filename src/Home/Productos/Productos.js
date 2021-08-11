@@ -18,9 +18,11 @@ function Productos(props) {
         <Link to={`/detalle-producto/${props.datosDeProducto._id}`}>
           <img alt="maquillaje" clasName="imagenProducto" src={props.datosDeProducto.image} />
         </Link>
-
-        <p>{props.datosDeProducto.product_name}</p>
-        <p>${props.datosDeProducto.price}</p>
+        <div className="datos-producto">
+          <p>{props.datosDeProducto.product_name}</p>
+          <p>{props.datosDeProducto.brand}</p>
+          <p className="precio-producto">${props.datosDeProducto.price}</p>
+        </div>
         {props.carrito ? (
 
         <button type="button" className=" btn btn-rojo" onClick={() => {

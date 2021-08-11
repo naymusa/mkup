@@ -16,7 +16,8 @@ function Buscador() {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = target.name;
-    setValores({ ...formulario, [name]: value });
+    const brand = target.brand;
+    setValores({ ...formulario, [name]: value, [brand]: value });
     // ... > combina el valor que tiene el formulario con el valor de name y lo convierte a objeto
   };
 
