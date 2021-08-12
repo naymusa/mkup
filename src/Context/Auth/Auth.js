@@ -24,6 +24,8 @@
 import firebase from "firebase/app";
 import React, { useState } from "react";
 
+import Swal from 'sweetalert2';
+
 import {
   FirebaseAuthProvider,
   FirebaseAuthConsumer,
@@ -57,7 +59,13 @@ function Auth(props) {
 
   const agregarCarrito = (productoIndividual) => {
     setCarrito((prevState) => [...prevState, productoIndividual]);
-    alert("Se agregó exitosamente tu producto a tu carrito de compras");
+    // alert("Se agregó exitosamente tu producto a tu carrito de compras");
+    Swal.fire({
+      icon: 'success',
+      title: 'Tu deseo ha sido agregado al carrito de compras',
+      showConfirmButton: false,
+      timer: 1000
+    })
   };
 
   const quitarDeCarrito = (productoEliminado) => {
@@ -68,6 +76,20 @@ function Auth(props) {
         (productoIndividual) => productoIndividual._id !== productoEliminado._id
       )
     );
+    Swal.fire({
+      title: '¿Realmente quieres eliminarlo?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: `Si, eliminalo`,
+      denyButtonText: `Mejor no`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Producto eliminado', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('Tu producto aún quedará en tu carrito', '', 'info')
+      }
+    })
   };
 
   return (

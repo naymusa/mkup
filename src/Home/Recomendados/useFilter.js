@@ -7,7 +7,7 @@ function useFilter(listaProductos = [], term) {
   useEffect(() => {
     // proceso filter
     const filtrados = listaProductos.filter((producto) => {
-      return producto.product_name.toLowerCase().includes(term.toLowerCase());
+      return producto.product_name.toLowerCase().includes(term.toLowerCase()) || producto.brand.toLowerCase().includes(term.toLowerCase());
     });
     setNewProdFilter(filtrados);
   }, [listaProductos, term]);

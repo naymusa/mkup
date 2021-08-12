@@ -32,6 +32,7 @@
     border-radius: 15px;
     border-width: 1px;
     border-color: lightpink;
+    max-height: 800px;
 }
 
 .navbar-section-info-help {
@@ -104,6 +105,8 @@
 }
 
 .navbar{
-    /* position:fixed; */
+    position:fixed;
     width: 100%;
+    top: 0px;
+    left: 0px;
 }

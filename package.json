@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@react-firebase/auth": "^0.2.10",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -13,6 +14,7 @@
     "react-flickity-component": "^3.6.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "sweetalert2": "^11.1.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

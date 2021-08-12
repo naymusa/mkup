@@ -5,7 +5,6 @@ import Buscador from "./Buscador.js";
 import React, { useContext } from "react";
 
 import { Link } from "react-router-dom";
-
 import { AuthContext } from "../../Context/Auth/Auth.js";
 
 function Header() {
@@ -13,8 +12,11 @@ function Header() {
   const { session, metodos } = useContext(AuthContext);
   const { isSignedIn, user } = session;
 
+  const { carrito } = useContext(AuthContext);
+
   return (
-    <div className="navbar">
+    <header>
+      <nav className="navbar">
       <div className="navbar-cintillo">
         <p>Compra hasta 12 MSI en compras mínimas $1,500</p>
       </div>
@@ -22,8 +24,8 @@ function Header() {
         <div className="navbar-section-info-logo">
           <Link to="/">
             <img
-              alt="maquillaje-musa"
-              src="https://1757140519.rsc.cdn77.org/blog/wp-content/uploads/sites/4/2019/03/0059_t_cherie_s-beauty-logo_11.png"
+              alt="maquillaje-musa-logo"
+              src="https://www.postoverde.cl/wp-content/uploads/2021/04/Logo_Musa-01-1-2.png"
             />
           </Link>
         </div>
@@ -56,7 +58,7 @@ function Header() {
                         className="carrito"
                     src="https://image.flaticon.com/icons/png/512/126/126083.png"/> */}
             <Link to="/carrito">
-              <button>Carrito</button>
+              <button>Carrito ({carrito.length})</button>
             </Link>
           </div>
         </div>
@@ -66,7 +68,8 @@ function Header() {
         <p className="catego">Brochas </p>
         <p className="catego">Ojos </p>
       </section>
-    </div>
+    </nav>
+    </header>
   );
 }
 
