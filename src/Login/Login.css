@@ -1,3 +1,25 @@
 .wrap-login{
     display: flex;
+    margin-top: 170px;
+}
+
+.wrap-login-banner{
+    height: auto;
+}
+.wrap-login-banner{
+    width: 400px;
+}
+
+.wrap-login-registro h2{
+    color:rgb(226, 121, 188);
+}
+
+.wrap-login-registro{
+    margin-left: 30px;
+    margin-top: 80px;
+}
+
+.login-page-boton{
+    height: 30px;
+    width: 80px;
 }

@@ -4,9 +4,7 @@ import { useParams } from "react-router-dom";
 import { AuthContext } from "../../Context/Auth/Auth.js"
 import "./Detalle1.css"
 
-
 function Detalle1 (props) {
-
     const {agregarCarrito} = useContext(AuthContext);
 
     const [producto, setProducto] = useState({
@@ -31,32 +29,33 @@ function Detalle1 (props) {
    
 
 
-        return (
-            <div>
-                <h3>Detalle de Producto</h3>
-
-                <div className="wrap-pdp">
-
-                    <img className="img-pdp" src={producto.image} alt="maquillaje"></img>
-
-                    <section className="datos-producto-pdp">
-                        <h3>{producto.product_name}</h3>
-                        <h4>{producto.brand}</h4>
-                        <p className="precio-producto-pdp">$ {producto.price}</p>
-                        <p>{producto.description}</p>
-                        
-                        {/* <img alt="maquillaje">{producto.image}</img> */}
-                        {producto.isActive ? <button type="button" className=" btn btn-verde" onClick={() => {
-                        agregarCarrito(props.datosDeProducto);
-                        }} > Comprar ahora </button>  : <p>Agotado</p>}
-                        <br></br>
-                        <button type="button">Agregar a mis favoritos</button>
-                    </section>
-                </div>
- 
+    return (
+        <div>
+    
+            <div className="wrap-pdp">
+    
+                <img className="img-pdp" src={producto.image} alt="maquillaje"></img>
+    
+                <section className="datos-producto-pdp">
+                    <h3>{producto.product_name}</h3>
+                    
+                    <h4>{producto.brand}</h4>
+                    <p className="precio-producto-pdp">$ {producto.price}.00</p>
+                    <p>{producto.description}</p>
+                    
+                    {/* <img alt="maquillaje">{producto.image}</img> */}
+                    {producto.isActive ? <button type="button" className=" btn btn-verde" onClick={() => {
+                    agregarCarrito(props.datosDeProducto);
+                    }} > Comprar ahora </button>  : <p>Agotado</p>}
+                    <br></br>
+                    <button type="button">Agregar a mis favoritos</button>
+                </section>
             </div>
-        )
+    
+        </div>
+    )
 
 }
 
 export default Detalle1;
+

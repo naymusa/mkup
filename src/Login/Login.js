@@ -10,11 +10,11 @@ function Login() {
   return (
     <div className="wrap-login">
 
-      <img alt="login-mkup" className="wrap-login-banner" src="https://i.pinimg.com/564x/1b/ac/d0/1bacd04347527e41808ba3ead27c8421.jpg" />
+      <img alt="login-mkup" className="wrap-login-banner" src="https://i.pinimg.com/originals/f8/cb/cf/f8cbcfec2b3a31420bc217058a3486ff.jpg" />
       
       <section className="wrap-login-registro">
       <h2>Inicia sesion</h2>
-      <button className="login-page-boton" onClick={metodos.sessionConGoogle}>google</button>
+      <button className="login-page-boton" onClick={metodos.sessionConGoogle}>Google</button>
       {/* <button onClick={metodos.sessionConGithub}>github</button> Esta sesión se sacó de firebase*/}
       </section>
     </div>

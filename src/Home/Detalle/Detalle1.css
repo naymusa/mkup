@@ -1,6 +1,11 @@
-.precio-producto-pdp{
-    font-weight: bold;
-    color: deeppink;  
+.wrap-pdp{
+    background-color: white;
+    display: flex;
+    padding: 20px;
+}
+
+.img-pdp{
+    margin-top: 170px;
 }
 
 .datos-producto-pdp{
@@ -8,8 +13,7 @@
     margin-top: 170px;
 }
 
-.wrap-pdp{
-    background-color: white;
-    display: flex;
-    padding: 20px;
+.precio-producto-pdp{
+    font-weight: bold;
+    color: deeppink;  
 }
