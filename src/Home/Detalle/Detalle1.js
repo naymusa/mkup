@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import { AuthContext } from "../../Context/Auth/Auth.js"
 import "./Detalle1.css"
+import "./Detalle1-mob.css"
 
 function Detalle1 (props) {
     const {agregarCarrito} = useContext(AuthContext);
@@ -20,7 +21,7 @@ function Detalle1 (props) {
     console.log(idProducto)
   
     useEffect(() => {
-      fetch("https://hungry-jang-a05289.netlify.app/.netlify/functions/server/catalogoApi/catalogo/" + idProducto)
+      fetch("https://hungry-jang-a05289.netlify.app/.netlify/functions/server/catalogoApi/productos/detalle/" + idProducto)
         .then((response) => response.json())
         .then((data) => {
             console.log(data)

@@ -3,6 +3,7 @@ import { AuthContext } from "../../Context/Auth/Auth.js";
 
 import { Link } from "react-router-dom";
 import "./Productos.css";
+import "./Productos-mob.css";
 
 
 
@@ -16,7 +17,7 @@ function Productos(props) {
       <div className="cards">
 
         <Link to={`/detalle-producto/${props.datosDeProducto._id}`}>
-          <img alt="maquillaje" clasName="imagenProducto" src={props.datosDeProducto.image} />
+          <img alt="maquillaje" className="imagenProducto" src={props.datosDeProducto.image} />
         </Link>
         <div className="datos-producto">
           <p>{props.datosDeProducto.product_name}</p>

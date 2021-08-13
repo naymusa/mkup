@@ -1,0 +1,103 @@
+@media screen and (max-width: 480px){
+
+    .navbar-cintillo p {
+        font-size: 12px;
+        margin: 0px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        
+    }
+
+    .navbar-cintillo{
+        background-color: rgb(226, 121, 188);
+        height: 25px;
+    }
+    .navbar-section-info {
+        background-color: white;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-header{
+        display: flex;
+        flex-flow: column;
+    }
+    
+    .navbar-section-info-logo img{
+        width: 90px;
+        height: auto;
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+
+    .navbar-section-info-logo{
+        height: 50px;
+    }
+    
+    .navbar-section-info-search input{
+        width: 200px;
+        height: 30px;
+        border-radius: 15px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(226, 121, 188);
+        max-height: 800px;
+        margin-top: 25px;
+        display: flex;
+        top: 0;
+    }
+    
+    .navbar-section-info-help {
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar-boton{
+        height: auto;
+        background-color: white;
+    
+    }
+    
+    
+    .navbar-boton button{
+        background-color: white;
+        max-width: 100px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 6px;
+        /* margin: 4px;
+        padding: 8px; */
+    }
+    
+    .navbar-boton button:hover {
+        background: rgb(226, 121, 188);
+        color: white;
+        border-color: rgb(226, 121, 188);
+    }
+    
+    .icono img{
+        width: 30px;
+        height: auto;
+    }
+
+    .Categorias{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: rgb(184, 184, 184);
+    }
+    
+    .catego{
+        margin-block: 8px;
+    }
+    
+    .navbar{
+        position:fixed;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+    }
+}

@@ -1,0 +1,52 @@
+@media screen and (max-width: 480px){
+    
+    .cards{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        height: 10px;
+        width: 155px;
+        min-height: 280px;
+        
+        align-items: center;
+        justify-content: flex-end;
+       
+        border-radius: 10px;
+    
+    }
+    .cards p{
+        margin: 5px;
+    }
+    
+    .cards img {
+        width: 130px;
+        height: auto;
+    
+    }
+    
+    .vitrinas{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        list-style-type: none;
+        padding-right: 40px;
+    
+    }
+    
+    .precio-producto{
+        font-weight: bold;
+        color: deeppink;   
+    }
+    
+    .datos-producto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    
+    .img-pdp{
+        width: 450px;
+    }
+}
