@@ -26,10 +26,9 @@ function Buscador() {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setProducto(data);
       });
-  });
+  },[]);
 
   return (
     <div className="navbar-section-info-search">

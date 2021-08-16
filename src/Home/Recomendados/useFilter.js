@@ -8,6 +8,7 @@ function useFilter(listaProductos = [], term) {
     // proceso filter
     const filtrados = listaProductos.filter((producto) => {
       return producto.product_name.toLowerCase().includes(term.toLowerCase()) || producto.brand.toLowerCase().includes(term.toLowerCase());
+      //toLowerCase= CUANDO TENGAS TEXTO EN MAYÚSCULAS LO PASE A MINUSCULAS - toUperCase = en mayúsculas
     });
     setNewProdFilter(filtrados);
   }, [listaProductos, term]);

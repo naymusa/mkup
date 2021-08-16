@@ -17,9 +17,8 @@ useEffect(() => {
   fetch("https://hungry-jang-a05289.netlify.app/.netlify/functions/server/catalogoApi/productos")
     .then((response) => response.json())
     .then((data) => {
-        console.log(data)
         setProducto(data)});
-});
+},[]);
 
 
   return (
